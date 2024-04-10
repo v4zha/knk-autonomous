@@ -1,3 +1,4 @@
+# Description: Output format for the knk_drive module
 TRAJECTORY_SIZE = 10
 # x,y,z
 model_plan = {
@@ -32,18 +33,17 @@ model_edges = {
     'std': edge
 }
 
-model_stop_lines = {
-    
-}
-
 model_pose = {
-
+    # x,y
+    "velocity_mean":[0,0],
+    "velocity_std":[0,0],
+    "rotation_mean":[0,0],
+    "rotation_std":[0,0],
 }
 
 model_out = {
     'plans': [[model_plan]],
     'lane': model_lane,
     'road_edges': model_edges,
-    'stop_lines': model_stop_lines,
     'pose': model_pose
 }
